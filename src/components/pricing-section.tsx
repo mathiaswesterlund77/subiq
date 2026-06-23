@@ -73,8 +73,8 @@ const plans: Plan[] = [
     description:
       "For small teams that want full visibility and control over their SaaS spend.",
     monthlyPrice: 19,
-    yearlyPrice: 15,
-    yearlyBilled: "Billed yearly ($180/year)",
+    yearlyPrice: 16,
+    yearlyBilled: "Billed yearly ($192/year)",
     badge: "Most popular",
     featured: true,
     roi: "If Subiq helps you cut even one unused subscription, Pro pays for itself — and you keep the rest.",
