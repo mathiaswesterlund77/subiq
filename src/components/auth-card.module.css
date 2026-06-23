@@ -1,0 +1,198 @@
+.shell {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 920px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #111110;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.7);
+  min-height: 600px;
+}
+
+.pane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+.signinPane {
+  z-index: 2;
+  opacity: 1;
+}
+
+.signupPane {
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shell.signupActive .signinPane {
+  z-index: 1;
+  opacity: 0;
+  transform: translateX(100%);
+  pointer-events: none;
+}
+
+.shell.signupActive .signupPane {
+  z-index: 5;
+  opacity: 1;
+  transform: translateX(100%);
+  pointer-events: auto;
+}
+
+.overlayTrack {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+  transition: transform 0.7s ease-in-out;
+}
+
+.shell.signupActive .overlayTrack {
+  transform: translateX(-100%);
+}
+
+.overlay {
+  position: relative;
+  width: 200%;
+  height: 100%;
+  left: -100%;
+  background: linear-gradient(135deg, #fde047 0%, #eab308 100%);
+  transition: transform 0.7s ease-in-out;
+}
+
+.shell.signupActive .overlay {
+  transform: translateX(50%);
+}
+
+.overlayPane {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.7s ease-in-out;
+}
+
+.overlayLeft {
+  left: 0;
+  transform: translateX(-20%);
+}
+
+.shell.signupActive .overlayLeft {
+  transform: translateX(0);
+}
+
+.overlayRight {
+  right: 0;
+  transform: translateX(0);
+}
+
+.shell.signupActive .overlayRight {
+  transform: translateX(20%);
+}
+
+.overlayBlobA {
+  pointer-events: none;
+  position: absolute;
+  left: -80px;
+  top: -100px;
+  width: 280px;
+  height: 280px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.25);
+  filter: blur(60px);
+}
+
+.overlayBlobB {
+  pointer-events: none;
+  position: absolute;
+  bottom: -100px;
+  right: -64px;
+  width: 280px;
+  height: 280px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.1);
+  filter: blur(60px);
+}
+
+@media (max-width: 767px) {
+  .shell {
+    min-height: auto;
+    max-width: 420px;
+  }
+  .pane {
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: auto;
+    transform: none !important;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .signinPane,
+  .signupPane {
+    z-index: auto;
+    pointer-events: auto;
+  }
+  .signupPane {
+    display: none;
+    opacity: 1;
+  }
+  .shell.signupActive .signinPane {
+    display: none;
+    opacity: 0;
+  }
+  .shell.signupActive .signupPane {
+    display: block;
+    opacity: 1;
+  }
+  .overlayTrack {
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: auto;
+    z-index: auto;
+    transform: none !important;
+  }
+  .overlay {
+    width: 100%;
+    height: auto;
+    left: auto;
+    transform: none !important;
+    background: linear-gradient(135deg, #fde047 0%, #eab308 100%);
+  }
+  .overlayPane {
+    position: relative;
+    width: 100%;
+    height: auto;
+    transform: none !important;
+    padding: 2.25rem 1.5rem;
+  }
+  .overlayLeft {
+    display: none;
+  }
+  .shell.signupActive .overlayLeft {
+    display: flex;
+  }
+  .shell.signupActive .overlayRight {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pane,
+  .overlayTrack,
+  .overlay,
+  .overlayPane {
+    transition: none;
+  }
+}

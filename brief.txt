@@ -1,0 +1,495 @@
+﻿SUBIQ
+Website Copy & SEO Update Brief
+For developers implementing landing page changes
+Reference file
+subiq-hero.html
+Document date
+April 2026
+Scope
+Copy + SEO meta tags + structure notes
+
+
+1. Overview & Purpose
+This document contains all copy, SEO instructions, and implementation notes for the Subiq landing page update. The reference HTML file (subiq-hero.html) shows the full visual design — use it as a layout reference only. All copy should be implemented exactly as written below.
+
+Important: This update includes both visible copy changes AND behind-the-scenes SEO changes (meta tags, keyword placement). Both must be implemented for the update to be effective.
+
+2. SEO Meta Tags
+Add the following tags inside the <head> of the landing page. These are critical for search ranking and must not be skipped.
+
+2.1 Required Meta Tags
+TITLE TAG
+<title>Subiq — SaaS Subscription Management Software for Small Teams</title>
+
+META DESCRIPTION
+<meta name="description" content="Subiq is a SaaS management platform that helps small teams track subscriptions, manage software spend, get renewal alerts, and reduce SaaS costs by 20–30%. Free plan available." />
+
+META KEYWORDS
+<meta name="keywords" content="subscription management software, saas subscription management, saas management platform, saas spend management, subscription tracker, saas cost management, manage saas subscriptions, software license tracking" />
+
+2.2 Open Graph Tags (Social Sharing)
+These control how the page appears when shared on LinkedIn, X, Slack, etc.
+
+<meta property="og:title" content="Subiq — SaaS Subscription Management Software for Small Teams" />
+
+<meta property="og:description" content="Track subscriptions, manage SaaS spend, and reduce software costs. Free plan available." />
+
+<meta property="og:type" content="website" />
+
+<meta property="og:url" content="https://www.subiq.io" />
+
+
+3. Copy — Section by Section
+All copy is written below in the exact order it appears on the page. Implement text exactly as written — including punctuation, capitalisation, and line breaks.
+
+3.1 Hero
+Badge
+SaaS Subscription Management Software
+Headline
+You’re probably paying for 3 tools nobody uses.
+Subheadline
+Small teams bleed money on forgotten renewals and unused software. Subiq is the subscription management software that gives your team one place to track every tool, manage SaaS spend, and finally see where the money actually goes.
+CTA Button
+Start tracking for free — no credit card needed
+Microcopy
+Free up to 3 tools · Set up in 2 minutes
+
+3.2 Social Proof
+Eyebrow
+Built for small teams tired of SaaS surprises
+Stat
+Tracking $2M+ in SaaS spend
+Sub-stat
+across our early users
+
+3.3 The Problem
+Badge
+The Problem
+Headline
+Nobody on your team knows what you’re actually paying for.
+Body
+Small teams add tools fast and cancel them slow. Without proper SaaS cost management, subscriptions auto-renew in the background and software spend spirals. Nobody reviews what’s still being used. And by the end of the year, you’ve wasted thousands — without anyone noticing.
+
+Card 1 — Renewals Hit on Autopilot
+Title
+Renewals Hit on Autopilot
+Body
+Annual renewals slip through because no one gets a heads-up. Without SaaS renewal management, you’re charged thousands before anyone notices — and by then it’s too late to cancel or renegotiate.
+
+Card 2 — No One Owns the Stack
+Title
+No One Owns the Stack
+Body
+Different people sign up for different tools, but there’s no software license tracking in place. It all lives in inboxes, spreadsheets, and someone’s memory. Nobody has a full picture of what the team is paying for — or why.
+
+Card 3 — Ghost Seats & Dead Tools
+Title
+Ghost Seats & Dead Tools
+Body
+Half the team stopped using a tool months ago, but nobody ever asked. Without SaaS license management, you’re paying full price for 10 seats when only 3 are active — and no one tracks the difference.
+
+3.4 The Solution
+Badge
+The Solution
+Headline
+Add your tools. Loop in your team. Cut what nobody uses.
+Body
+Subiq is the SaaS management platform that replaces your messy spreadsheets with one dashboard to manage all your subscriptions. Invite members, send automatic review requests each month or quarter, and let your team flag what’s active, unused, or ready to cancel — so you always know where to optimize your SaaS spend.
+
+Stats
+Stat 1
+$340 — average monthly savings per team
+Stat 2
+3 tools — unused subscriptions found in the first week
+Stat 3
+<2 min — to set up, no integrations required
+
+Solution Cards
+Card 1 Title
+Renewal alerts before you get charged
+Card 1 Body
+Get notified days before any subscription renews. Enough time to cancel, downgrade, or renegotiate — instead of finding out from your bank statement.
+Card 1 Tag
+✓ Automated reminders
+
+Card 2 Title
+Invite your team. Send review requests.
+Card 2 Body
+Add team members and schedule automatic check-ins — monthly or quarterly. Everyone confirms which tools they actually use, so nothing slips through the cracks.
+Card 2 Tag
+✓ Monthly & quarterly reviews
+
+Card 3 Title
+Mark tools as active, unused, or cancelled
+Card 3 Body
+Your team tags every subscription with a status. Subiq calculates your possible savings automatically — so you see exactly how much you’d save by cutting the dead weight.
+Card 3 Tag
+✓ Possible savings calculated
+
+
+3.5 Features
+Badge
+Features
+Headline
+No bloat. Just the features that actually save you money.
+Body
+Every feature in Subiq exists for one reason — to give your team full SaaS spend visibility and control over software costs. Nothing more, nothing less.
+
+Feature 1
+Title
+Full spend dashboard
+Body
+Your subscription tracking tool in one view. See total monthly and yearly SaaS costs, broken down by each tool, updated as you go. No formulas, no manual updates.
+
+Feature 2
+Title
+Renewal calendar & alerts
+Body
+Every renewal on a visual timeline. Set alerts days or weeks before a charge hits — so you decide what stays, not your credit card.
+
+Feature 3
+Title
+Team invites & roles
+Body
+Add members from the dashboard. Everyone sees their own tools, admins see everything. One shared source of truth instead of scattered spreadsheets.
+
+Feature 4
+Title
+Automated review requests
+Body
+Schedule monthly or quarterly check-ins. Team members confirm what they use in one click. No chasing, no meetings, no guessing.
+
+Feature 5
+Title
+Active, unused, or cancelled
+Body
+Tag every subscription with a status for complete SaaS license management. Filter by unused to see dead weight instantly. Your dashboard adapts to show what matters right now.
+
+Feature 6
+Title
+Possible savings, auto-calculated
+Body
+The moment a tool is flagged unused, Subiq calculates your savings for instant SaaS cost optimization. See your total possible savings live — the number your team needs to make the call.
+
+3.6 How It Works
+Badge
+How It Works
+Headline
+Set up in 2 minutes. Start saving by the end of the week.
+Body
+No integrations, no onboarding calls. Start managing software subscriptions in three steps.
+
+Step 1 — Add your tools  (~2 minutes)
+Body
+Add subscriptions yourself, import them from a file, or invite your team and let each member add their own. However your team works — Subiq adapts.
+
+Step 2 — Get the full picture  (Runs on autopilot)
+Body
+Once tools are in, schedule automatic review requests — monthly or quarterly. Team members confirm what they still use in one click. No chasing, no meetings.
+
+Step 3 — See what to cut  (Savings from day one)
+Body
+Tools get tagged as active, unused, or cancelled. Subiq calculates your possible savings automatically. You decide what stays — and what goes.
+
+
+3.7 Compare
+Badge
+Compare
+Headline
+Your spreadsheet wasn’t built for this. Subiq was.
+Body
+Most teams start with a spreadsheet. It works — until it doesn’t. Here’s what changes when you switch.
+
+Feature
+Spreadsheets
+Subiq ✶
+Cost overview
+✗ Manual updates
+✓ Real-time dashboard
+Renewal reminders
+✗ Hope you remember
+✓ Automated alerts
+Team access
+✗ One shared file
+✓ Each member has a login
+Roles & permissions
+✗ Everyone can edit everything
+✓ Admin & member roles
+Review process
+✗ Manual Slack/email follow-ups
+✓ Automated review requests
+Review frequency
+✗ Whenever someone remembers
+✓ Monthly or quarterly, on schedule
+Tool status tracking
+✗ No system
+✓ Active, unused, cancelled
+Savings calculation
+✗ Guesswork
+✓ Auto-calculated from status
+Import & export
+✗ Copy-paste between files
+✓ File import & export
+Renewal calendar
+✗ Dates buried in cells
+✓ Visual timeline
+Data accuracy
+✗ Version conflicts, stale rows
+✓ Single source of truth
+Accountability
+✗ Nobody owns it
+✓ Clear ownership per tool
+Scales with growth
+✗ Breaks at 20+ tools
+✓ Built for growing teams
+Setup time
+✗ Hours of formatting
+✓ Under 2 minutes
+Price
+✗ “Free” (costs hours every month)
+✓ Free plan available
+
+Footer line
+15 reasons to ditch the spreadsheet — and you only need one.
+
+
+3.8 Pricing
+Badge
+Pricing
+Headline
+Start free. Upgrade when your stack grows.
+Subheadline
+No credit card required. No surprise charges. Cancel anytime.
+Trust pills
+✓ No credit card needed  ·  ✓ Cancel anytime  ·  ✓ Set up in 2 minutes
+Toggle labels
+Monthly / Yearly  (badge: Save 20%)
+
+Plan 1 — Free
+Price
+$0/month  |  Free forever
+Description
+For founders and solo operators tracking a small stack.
+Features
+✓ Track up to 3 tools ✓ Spend overview dashboard ✓ Renewal alerts ✓ Import & export via file — Team invites & roles (greyed out) — Automated review requests (greyed out) — Tool status tracking (greyed out) — Possible savings calculation (greyed out)
+CTA
+Start tracking for free
+
+Plan 2 — Pro  (featured / most popular)
+Price
+$15/month (yearly) · $19/month (monthly)  |  Billed yearly: $180/year
+Description
+For small teams that want full visibility and control over their SaaS spend.
+ROI box
+The math: If Subiq helps you cut just one unused $20/mo tool, Pro has already paid for itself — and you pocket the difference.
+Features
+✓ Track up to 25 tools ✓ Spend overview dashboard ✓ Renewal alerts & calendar ✓ Import & export via file ✓ Team invites & roles [Pro badge] ✓ Automated review requests [Pro badge] ✓ Monthly or quarterly review cycles [Pro badge] ✓ Active, unused & cancelled status [Pro badge] ✓ Possible savings, auto-calculated [Pro badge] ✓ Priority support
+CTA
+Get Pro — start saving today
+
+Plan 3 — Enterprise
+Price
+Custom  |  Tailored to your team
+Description
+For larger teams and organizations managing a complex tool stack.
+Features
+✓ Everything in Pro ✓ Unlimited tools ✓ Unlimited team members ✓ Custom onboarding ✓ Dedicated account support ✓ Custom billing
+CTA
+Contact us
+
+Bottom text
+All plans include renewal alerts, spend dashboard, and import/export. Upgrade, downgrade, or cancel at any time.
+ROI callout
+Average team saves $340/mo with Subiq. Pro costs $15/mo. That’s a 22x return on a tool that takes 2 minutes to set up.
+
+
+3.9 Resources
+Badge
+Resources
+Headline
+Read before your next renewal hits.
+Body
+Practical guides to help your team spend less on SaaS — starting this week.
+
+Article 1 — Tag: Guide
+Title
+The SaaS Audit Checklist for Small Teams
+Body
+Find every tool your team pays for in 30 minutes. A step-by-step walkthrough covering software license tracking, forgotten subscriptions, unused seats, and quick wins you can act on today.
+Read time
+5 min read
+
+Article 2 — Tag: Insight
+Title
+Why Small Teams Overspend on SaaS (And How to Reduce Costs)
+Body
+The average 10-person team wastes $4,000+ per year on tools nobody uses. Here’s why it happens, why spreadsheets make it worse, and how to reduce SaaS costs with better software spend management.
+Read time
+4 min read
+
+Article 3 — Tag: Playbook
+Title
+The Monthly SaaS Review: A 10-Minute Routine That Saves Thousands
+Body
+How to run a quick team check-in that keeps your tool stack lean — including SaaS renewal best practices. A ready-to-use framework you can start this week, with or without Subiq.
+Read time
+3 min read
+
+Link text
+Read all resources →
+
+3.10 FAQ
+Badge
+FAQ
+Headline
+Got questions? We’ve got answers.
+Body
+Everything you need to know before getting started.
+
+Q: Who is Subiq built for?
+Subiq is SaaS management software built for small teams — startups, agencies, and growing companies that use multiple tools but don’t have a dedicated procurement team. If you’re a founder, ops lead, or team lead tracking subscriptions in a spreadsheet (or not tracking them at all), Subiq is for you.
+Q: Is Subiq really free?
+Yes. The free plan lets you track up to 3 tools with renewal alerts and a spend dashboard — no credit card required, no time limit. When your stack grows or you need team features, you can upgrade to Pro.
+Q: How do I add my subscriptions?
+Three ways: add tools manually in the dashboard, import them from a file, or invite your team and let each member add their own. Most teams are fully set up in under 2 minutes.
+Q: What are automated review requests?
+As an admin, you can schedule automatic check-ins — monthly or quarterly. Each team member receives a request to review their tools and confirm what they still use. It takes one click to respond, and you get a clear picture without chasing anyone.
+Q: What do the tool statuses mean?
+Every tool can be tagged as active (in use), unused (nobody’s using it), or cancelled (already terminated). These statuses power your savings insights — Subiq automatically calculates how much you’d save by cutting unused tools.
+Q: How does the savings calculation work?
+When a tool is marked as unused, its cost is added to your “possible savings” total. This number updates in real time, so you always know exactly how much you could save by cancelling the tools your team no longer needs.
+Q: Do I need to connect my bank account or credit card?
+No. Subiq doesn’t require any bank or payment integrations. You add your subscriptions manually or via file import. This keeps setup fast and your financial data private.
+Q: How is Subiq different from a spreadsheet?
+Spreadsheets have no alerts, no team roles, no review process, and go stale the moment someone forgets to update them. As a purpose-built subscription management software, Subiq gives you automated renewal reminders, team collaboration with roles, scheduled review requests, status tracking, and auto-calculated savings — all set up in 2 minutes.
+Q: Can I import and export my data?
+Yes. You can import your tools from a file to skip manual entry, and export your full subscription list anytime. Your data is never locked in.
+Q: How can I reduce SaaS costs for my team?
+Start by auditing which tools your team actually uses. The fastest way to reduce software costs is to identify unused subscriptions and cancel them before they renew. Subiq automates this with review requests, status tracking, and real-time savings calculations — most teams cut SaaS spend by 20–30% within the first month.
+Q: How much do companies typically spend on SaaS?
+The average company uses 130+ SaaS tools, and most overspend by 25–35% due to unused licenses, forgotten renewals, and duplicate tools. For a small team, that can mean $4,000+ per year in wasted software spend. SaaS spend optimization starts with visibility — knowing exactly what you’re paying for.
+Q: Can I cancel or change my plan at any time?
+Absolutely. You can upgrade, downgrade, or cancel at any time — no lock-in, no cancellation fees. If you cancel Pro, you keep access to the free plan with up to 3 tools.
+
+Contact line
+Still have questions? Reach out at hello@subiq.io
+
+
+3.11 CTA Banner
+Headline
+You already know you’re paying for tools nobody uses. Now fix it.
+Body
+Join the teams that stopped guessing and started saving. Track SaaS subscriptions, manage software spend, and see your first savings this week.
+CTA Button
+Start tracking for free
+Microcopy
+No credit card required · Free up to 3 tools · Set up in 2 minutes
+
+3.12 Footer
+Logo
+SUBIQ
+Description
+SaaS subscription management software for small teams. Track subscriptions, manage software spend, get renewal alerts, and reduce SaaS costs — all from one simple dashboard.
+Contact email
+hello@subiq.io
+Product links
+Features, Pricing, Resources
+Legal links
+Terms of Service, Privacy Policy
+Copyright
+© 2026 Subiq. All rights reserved.
+
+
+4. SEO Keyword Map
+These keywords are intentionally embedded in the copy above. Make sure they survive the implementation — do not rephrase sentences in ways that remove them.
+
+Keyword
+Volume
+Where it appears
+subscription management software
+1900
+Title tag, hero badge, hero body, FAQ, footer
+saas subscription management
+1000
+Title tag, meta description, hero badge
+saas management platform
+720
+Meta description, solution body
+saas spend management
+720
+Hero body, solution body, CTA banner
+saas license management
+590
+Problem card 3, feature card 5
+subscription tracker app
+590
+Meta keywords
+saas management software
+480
+FAQ answer: Who is Subiq built for?
+software license tracking
+260
+Problem card 2, resource article 1
+software spend management
+260
+Resource article 2, CTA banner
+subscription tracking tool
+210
+Feature card 1
+manage saas subscriptions
+170
+Meta keywords, solution body
+saas cost management
+170
+Problem body
+saas spend optimization
+170
+Solution body, FAQ answer 11
+saas renewal management
+110
+Problem card 1
+saas cost optimization
+110
+Feature card 6
+saas renewal best practices
+70
+Resource article 3
+saas spend management tool
+70
+Meta keywords (indirect)
+reduce saas costs
+30
+FAQ answer 10, resource article 2
+track saas subscriptions
+20
+CTA banner body
+manage software subscriptions
+20
+How It Works body
+saas spend visibility
+10
+Features section body
+how to reduce saas costs
+10
+FAQ answer 10
+
+
+5. Implementation Notes
+
+5.1 What to implement
+All copy changes listed in Section 3 — implement text exactly as written
+All SEO meta tags listed in Section 2 — these are required for the update to work
+Keyword placement must be preserved — do not rephrase sentences in ways that remove the keywords listed in Section 4
+The pricing toggle should default to Yearly ($15/mo) and switch to Monthly ($19/mo) on click
+
+5.2 Known items to fix (not in this brief)
+Responsiveness — the page is not mobile-optimised; grids with 3 columns need breakpoints for mobile
+Navigation — the site header/nav is not included in the HTML reference file
+Dashboard mockup — currently shows “Cost by Tool” with categories (Software, Cloud, Comms, Design). If the product doesn’t have categories, update the mockup to show individual tool names instead
+All links are placeholder (#) — replace with real URLs before going live
+Stat numbers ($340/mo savings, 3 unused tools, $2M+ tracked) should be verified against real data before publishing
+
+5.3 Reference file
+The attached file subiq-hero.html is a static HTML design reference. It shows the full layout, visual hierarchy, and copy placement for every section. Use it to understand structure and design intent, but implement the copy from this document — not directly from the HTML file.
+
+The HTML file is not production code. Do not deploy it directly. It uses Google Fonts CDN links and static assets.

@@ -1,0 +1,23 @@
+# Subiq
+
+> Subiq is SaaS subscription management software for small teams. Track every subscription, manage software spend, get renewal alerts before charges hit, and reduce SaaS costs from one simple dashboard.
+
+Subiq helps small teams (startups, agencies, growing companies) replace messy spreadsheets with one shared source of truth for every SaaS subscription. Add tools manually or via file import, invite teammates, schedule monthly or quarterly review requests, and tag each tool as active, unused, or cancelled. Subiq automatically calculates possible savings based on unused tools so teams know exactly where to cut spend.
+
+The free plan covers up to 3 tools with renewal alerts and a spend dashboard — no credit card required. Paid plans unlock unlimited tools, team invites, and automated review workflows.
+
+## Product
+
+- [Landing page](https://www.subiq.io): Product overview, features, pricing, and FAQ
+- [Sign up](https://www.subiq.io/signup): Create a free Subiq account
+- [Sign in](https://www.subiq.io/login): Log in to an existing account
+
+## Legal
+
+- [Privacy policy](https://www.subiq.io/privacy-policy): How Subiq collects, stores, and uses customer data
+- [Terms of service](https://www.subiq.io/terms-of-service): Terms governing use of the Subiq service
+
+## Optional
+
+- [Sitemap](https://www.subiq.io/sitemap.xml): Machine-readable list of public pages
+- [Contact](mailto:hello@subiq.io): Email Subiq for support or sales questions
