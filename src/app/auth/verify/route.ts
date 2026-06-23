@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/server";
-import { createAdminClient } from "@/lib/supabase/admin";
 
 export async function GET(request: Request) {
   const { searchParams, origin } = new URL(request.url);
@@ -22,18 +21,10 @@ export async function GET(request: Request) {
 
   const userId = data.user?.id;
 
-  if (userId) {
-    try {
-      const admin = createAdminClient();
-      await admin
-        .from("profiles")
-        .update({ signup_conversion_tracked: true })
-        .eq("id", userId)
-        .eq("signup_conversion_tracked", false);
-    } catch {
-      // ignore
-    }
-  }
+  // NOTE: Do NOT set signup_conversion_tracked here — that flag must stay
+  // false until the client-side SignupConversion component on the dashboard
+  // has actually fired the GA4 sign_up + Google Ads conversion events.
+  // Setting it prematurely prevents the gtag events from ever triggering.
 
   const target = new URL("/login", origin);
   target.searchParams.set("verified", "true");
