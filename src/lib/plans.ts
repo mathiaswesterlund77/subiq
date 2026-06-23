@@ -37,7 +37,7 @@ export const PLAN_LABELS: Record<Plan, string> = {
  */
 export const PLAN_PRICING: Record<Plan, Record<Interval, number>> = {
   free: { monthly: 0, yearly: 0 },
-  pro: { monthly: 19, yearly: 15 },
+  pro: { monthly: 19, yearly: 16 },
   business: { monthly: 49, yearly: 39 },
 };
 
