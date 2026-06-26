@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import { runReviewReminders } from "@/lib/review-reminders";
 
+// Allow up to 60 s on the Hobby plan.
+export const maxDuration = 60;
+
 /**
  * Standalone endpoint for review reminders.
  *
