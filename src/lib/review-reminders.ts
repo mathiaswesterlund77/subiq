@@ -38,6 +38,7 @@ export interface ReviewRemindersResult {
  */
 export async function runReviewReminders(): Promise<ReviewRemindersResult> {
   const today = new Date().toISOString().split("T")[0];
+  console.log("[ReviewReminders] checking for due workspaces, today =", today);
 
   // Workspaces with reminders enabled and a send date due today or earlier
   // (`lte` so a missed cron run still fires on the next day). The workspace
@@ -55,8 +56,11 @@ export async function runReviewReminders(): Promise<ReviewRemindersResult> {
     .returns<DueSetting[]>();
 
   if (settingsError) {
+    console.error("[ReviewReminders] settings query error:", settingsError.message);
     throw new Error(settingsError.message);
   }
+
+  console.log("[ReviewReminders] found", dueSettings?.length ?? 0, "due workspace(s)");
 
   let workspaces = 0;
   let sent = 0;
@@ -129,8 +133,10 @@ export async function runReviewReminders(): Promise<ReviewRemindersResult> {
       .eq("workspace_id", setting.workspace_id);
 
     if (updateError) {
+      console.error("[ReviewReminders] failed to advance schedule for workspace", setting.workspace_id, updateError.message);
       errors++;
     } else {
+      console.log("[ReviewReminders] workspace", setting.workspace_id, "done — next send:", nextSendAt);
       workspaces++;
     }
   }

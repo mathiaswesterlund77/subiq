@@ -3,6 +3,10 @@ import { createClient } from "@supabase/supabase-js";
 import { sendRenewalReminderEmail } from "@/lib/email";
 import { runReviewReminders } from "@/lib/review-reminders";
 
+// Allow up to 60 s on the Hobby plan (default is 10 s, which can be too
+// short when processing renewal + review reminders sequentially).
+export const maxDuration = 60;
+
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.SUPABASE_SERVICE_ROLE_KEY!
@@ -26,6 +30,25 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
+  console.log("[CRON /reminders] started");
+
+  // ── Review reminders ─────────────────────────────────────────────────
+  // Run these FIRST so they are not starved by the renewal-reminder loop
+  // (keeps the project within the Hobby plan's 2-cron limit). A failure
+  // here must not mask the renewal-reminder result, so it is reported
+  // separately rather than thrown.
+  let reviewReminders;
+  try {
+    reviewReminders = await runReviewReminders();
+    console.log("[CRON /reminders] review reminders done", reviewReminders);
+  } catch (error) {
+    reviewReminders = {
+      error: error instanceof Error ? error.message : "Unknown error",
+    };
+    console.error("[CRON /reminders] review reminders failed", reviewReminders.error);
+  }
+
+  // ── Renewal reminders ────────────────────────────────────────────────
   const now = new Date();
   let sent = 0;
   let skipped = 0;
@@ -99,18 +122,7 @@ export async function GET(request: Request) {
     }
   }
 
-  // Review reminders share this daily cron instead of a separate Vercel cron
-  // entry (keeps the project within the Hobby plan's 2-cron limit). A failure
-  // here must not mask the renewal-reminder result, so it is reported
-  // separately rather than thrown.
-  let reviewReminders;
-  try {
-    reviewReminders = await runReviewReminders();
-  } catch (error) {
-    reviewReminders = {
-      error: error instanceof Error ? error.message : "Unknown error",
-    };
-  }
+  console.log("[CRON /reminders] renewal reminders done", { sent, skipped, errors });
 
   return NextResponse.json({ sent, skipped, errors, reviewReminders });
 }
