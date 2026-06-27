@@ -75,20 +75,42 @@ export default function RootLayout({
           data-blockingmode="auto"
           strategy="beforeInteractive"
         />
-        {/* gtag.js — loaded once, shared by Google Analytics (G-) and Google Ads (AW-). */}
+        {/* gtag.js — loaded only AFTER Cookiebot consent so no tracking cookies
+            are set before the visitor consents. The CookiebotOnAccept event fires
+            both on first consent and on returning visits where consent was already
+            stored. Google Consent Mode v2 defaults (set above) remain in effect
+            until consent is given, so the first gtag() calls respect the grant. */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-3BTF1J2LZT"
+          id="gtag-consent-loader"
           strategy="afterInteractive"
+          data-cookieconsent="ignore"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                var loaded = false;
+                function boot(){
+                  if(loaded) return;
+                  loaded = true;
+                  var s = document.createElement('script');
+                  s.async = true;
+                  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-3BTF1J2LZT';
+                  document.head.appendChild(s);
+                  s.onload = function(){
+                    gtag('js', new Date());
+                    gtag('config', 'G-3BTF1J2LZT');
+                    gtag('config', 'AW-18167725721');
+                  };
+                }
+                window.addEventListener('CookiebotOnAccept', function(){
+                  if(Cookiebot.consent.statistics || Cookiebot.consent.marketing) boot();
+                });
+                // Returning visitor — consent already stored, event may have fired.
+                if(typeof Cookiebot !== 'undefined' && Cookiebot.consented &&
+                   (Cookiebot.consent.statistics || Cookiebot.consent.marketing)) boot();
+              })();
+            `,
+          }}
         />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-3BTF1J2LZT');
-            gtag('config', 'AW-18167725721');
-          `}
-        </Script>
         {children}
         <Toaster />
       </body>
